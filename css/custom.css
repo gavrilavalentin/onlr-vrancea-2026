@@ -1,21 +1,30 @@
+/* 1. Facem bara de navigare solidă și vizibilă din start */
+.navbar-default {
+    background-color: #222 !important; /* Culoare închisă */
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    border-bottom: 2px solid #f13a11; /* O linie fină roșie sub meniu */
+}
+
+/* 2. Resetăm secțiunea Intro să nu mai fie tabel și să aibă spațiu sus */
 #intro {
     height: auto !important;
-    min-height: 450px;           /* Puțin mai mult spațiu pentru impact */
-    padding-top: 150px !important; /* Îl împingem mai jos sub meniu */
+    min-height: 500px !important;
+    display: block !important; /* Foarte important: de la table la block */
+    padding-top: 150px !important; /* Spațiu generos pentru a coborî sub navbar */
     padding-bottom: 100px !important;
     background-position: center center;
-    background-size: cover;
 }
 
-/* Facem meniul să nu mai fie transparent deloc */
-.navbar-default {
-    background: #222 !important; /* Fundal închis la culoare din start */
-    border: none;
-    padding: 10px 0;
+/* 3. Resetăm containerul din Intro (în template e setat ca table-cell) */
+#intro .container {
+    display: block !important;
+    vertical-align: top !important;
 }
 
-/* Opțional: Schimbă culoarea de fundal a întregii secțiuni Intro 
-dacă nu vrei să folosești imaginea cu concertul */
-#intro {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/intro-bg.jpg');
+/* 4. Ajustăm titlurile să nu fie prea mari dacă am micșorat secțiunea */
+#intro h1 {
+    margin-top: 20px;
+    font-size: 3.5rem; /* Ajustează dimensiunea dacă e prea mare */
 }
