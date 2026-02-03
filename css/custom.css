@@ -28,3 +28,28 @@
     margin-top: 20px;
     font-size: 3.5rem; /* Ajustează dimensiunea dacă e prea mare */
 }
+
+/* --- AJUSTĂRI PENTRU LOGO NAVBAR --- */
+
+/* 1. Resetăm padding-ul containerului pentru a face loc imaginii */
+.navbar-brand {
+    padding: 5px 15px !important; /* Mai puțin spațiu sus/jos */
+    height: auto !important;      /* Permitem înălțimii să se adapteze */
+    display: flex;                /* Folosim flexbox pentru centrare */
+    align-items: center;          /* Centrează vertical imaginea */
+}
+
+/* 2. Controlăm dimensiunea imaginii */
+.navbar-brand img {
+    height: 50px;  /* Setează o înălțime fixă potrivită pentru meniu */
+    width: auto;   /* Păstrează proporțiile originale ale logo-ului */
+    /* Opțional: dacă pare prea înghesuit, mai adaugă puțin spațiu */
+    /* margin-top: 5px; */
+}
+
+/* Ajustare fină pentru mobil (când meniul se restrânge) */
+@media (max-width: 767px) {
+    .navbar-brand img {
+        height: 40px; /* Puțin mai mic pe ecranele mici */
+    }
+}
