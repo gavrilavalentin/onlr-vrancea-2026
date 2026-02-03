@@ -53,3 +53,71 @@
         height: 40px; /* Puțin mai mic pe ecranele mici */
     }
 }
+
+
+/* --- STILURI PENTRU HEADER TOP --- */
+
+#header-top {
+    background-color: #ffffff;
+    padding: 30px 0;
+    border-bottom: 4px solid #f13a11; /* Linie roșie sub header, asortată cu logo-ul */
+}
+
+/* Aliniere verticală logo și text */
+.display-flex-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-mare {
+    max-height: 180px; /* Dimensiune generoasă pentru header */
+    width: auto;
+    margin-bottom: 15px;
+}
+
+/* Formatare text tip #intro */
+.header-text-area h1 {
+    font-size: 38px;
+    font-weight: bold;
+    color: #222;
+    text-transform: uppercase;
+    margin: 5px 0;
+    letter-spacing: 1px;
+}
+
+.header-text-area h3 {
+    font-size: 18px;
+    color: #f13a11; /* Roșul din logo pentru contrast */
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* --- AJUSTARE NAVBAR --- */
+/* Deoarece avem header sus, meniul nu mai trebuie să fie 'fixed' din start 
+   sau trebuie să îi resetăm poziția dacă vrei să apară sub header */
+
+.navbar-default {
+    position: relative !important; /* Meniul va sta sub header, nu peste el */
+    top: 0;
+    margin-bottom: 0;
+}
+
+/* Resetăm și spațiul de la #intro deoarece navbar nu mai 'plutește' peste el */
+#intro {
+    padding-top: 80px !important;
+}
+
+/* Ajustări pentru mobil */
+@media (max-width: 767px) {
+    .header-text-area {
+        text-align: center;
+    }
+    .header-text-area h1 {
+        font-size: 24px;
+    }
+    .logo-mare {
+        max-height: 120px;
+    }
+}
