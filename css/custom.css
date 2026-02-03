@@ -1,0 +1,19 @@
+/* Ajustare sectiune Intro pentru a nu fi full-screen */
+#intro {
+    height: auto !important;     /* Anulează înălțimea de 100% din ecran */
+    min-height: 400px;           /* Setează o înălțime minimă rezonabilă */
+    padding-top: 120px;          /* Adaugă spațiu sus ca să nu intre sub meniu */
+    padding-bottom: 80px;        /* Spațiu egal jos */
+    display: block !important;   /* Schimbă de la 'table' la 'block' pentru control mai bun */
+}
+
+/* Ajustare fundal pentru a se vedea bine pe noua înălțime */
+#intro .container {
+    vertical-align: middle;
+}
+
+/* Dacă vrei ca meniul să nu mai fie transparent peste imaginea de sus */
+.navbar-default {
+    background-color: #222 !important; /* Sau orice culoare dorești pentru meniu */
+    margin-bottom: 0;
+}
