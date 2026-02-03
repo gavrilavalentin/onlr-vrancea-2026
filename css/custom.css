@@ -1,19 +1,21 @@
-/* Ajustare sectiune Intro pentru a nu fi full-screen */
 #intro {
-    height: auto !important;     /* Anulează înălțimea de 100% din ecran */
-    min-height: 400px;           /* Setează o înălțime minimă rezonabilă */
-    padding-top: 120px;          /* Adaugă spațiu sus ca să nu intre sub meniu */
-    padding-bottom: 80px;        /* Spațiu egal jos */
-    display: block !important;   /* Schimbă de la 'table' la 'block' pentru control mai bun */
+    height: auto !important;
+    min-height: 450px;           /* Puțin mai mult spațiu pentru impact */
+    padding-top: 150px !important; /* Îl împingem mai jos sub meniu */
+    padding-bottom: 100px !important;
+    background-position: center center;
+    background-size: cover;
 }
 
-/* Ajustare fundal pentru a se vedea bine pe noua înălțime */
-#intro .container {
-    vertical-align: middle;
-}
-
-/* Dacă vrei ca meniul să nu mai fie transparent peste imaginea de sus */
+/* Facem meniul să nu mai fie transparent deloc */
 .navbar-default {
-    background-color: #222 !important; /* Sau orice culoare dorești pentru meniu */
-    margin-bottom: 0;
+    background: #222 !important; /* Fundal închis la culoare din start */
+    border: none;
+    padding: 10px 0;
+}
+
+/* Opțional: Schimbă culoarea de fundal a întregii secțiuni Intro 
+dacă nu vrei să folosești imaginea cu concertul */
+#intro {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/intro-bg.jpg');
 }
