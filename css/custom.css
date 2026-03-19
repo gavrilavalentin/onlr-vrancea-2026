@@ -142,3 +142,30 @@
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* 1. Fundalul meniului în stare normală (sub antet) */
+.custom-navbar {
+    background-color: #0057a0; /* Albastrul din logo-ul tău */
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* 2. Fundalul meniului când devine FIX (Sticky) la scroll */
+.navbar.navbar-fixed-top {
+    background-color: #0057a0 !important; /* Forțăm culoarea și pentru starea fixă */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* 3. Schimbăm culoarea textului în ALB (pentru contrast pe fundal albastru) */
+.custom-navbar .nav li a {
+    color: #ffffff !important;
+}
+
+/* 4. Culoarea la hover (când treci cu mouse-ul peste link-uri) */
+.custom-navbar .nav li a:hover {
+    color: #f9bc28 !important; /* Galbenul din steagul tău pentru evidențiere */
+}
+
+/* 5. Culoarea link-ului activ (secțiunea în care te afli) */
+.custom-navbar .nav li.active a {
+    color: #f9bc28 !important;
+}
