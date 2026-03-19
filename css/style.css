@@ -206,7 +206,7 @@ footer {
 
 .custom-navbar .nav li a {
     color: #ddd;
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.6px;
     text-transform: uppercase;
@@ -245,7 +245,7 @@ footer {
 
 @media(min-width:768px) {
     .custom-navbar {
-        padding: 20px 0;
+        /* padding: 20px 0; */
         border-bottom: 0;
         background: 0 0; 
     }
@@ -371,12 +371,13 @@ footer {
 
 #program .program-divider {
     border: 1px solid #f9f9f9;
-    margin-top: 32px;
-    margin-bottom: 42px;
+    margin-top: 12px;
+    margin-bottom: 22px;
 }
 
 #program span {
     padding-right: 12px;
+	font-size: 16px;
 }
 
 #program img {

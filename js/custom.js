@@ -55,15 +55,16 @@ $(document).ready(function() {
   /* Owl Carousel
   -----------------------------------------------*/
   $(document).ready(function() {
-    $("#owl-speakers").owlCarousel({
-      autoPlay: 6000,
-      items : 4,
-      itemsDesktop : [1199,2],
-      itemsDesktopSmall : [979,1],
-      itemsTablet: [768,1],
-      itemsTabletSmall: [985,2],
-      itemsMobile : [479,1],
-    });
+		$("#owl-speakers").owlCarousel({
+			autoPlay: 6000, // Schimbă slide-ul la 6 secunde
+			items : 1,      // AFIȘEAZĂ DOAR O PERSOANĂ
+			itemsDesktop : [1199,1],
+			itemsDesktopSmall : [979,1],
+			itemsTablet: [768,1],
+			itemsMobile : [479,1],
+			navigation : false, // Putem lăsa doar punctele de jos pentru navigare
+			pagination : true,
+		});
   });
 
 

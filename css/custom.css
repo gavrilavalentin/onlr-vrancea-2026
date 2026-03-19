@@ -33,7 +33,7 @@
 
 /* 1. Resetăm padding-ul containerului pentru a face loc imaginii */
 .navbar-brand {
-    padding: 5px 15px !important; /* Mai puțin spațiu sus/jos */
+    padding: 15px !important; /* Mai puțin spațiu sus/jos */
     height: auto !important;      /* Permitem înălțimii să se adapteze */
     display: flex;                /* Folosim flexbox pentru centrare */
     align-items: center;          /* Centrează vertical imaginea */
@@ -205,5 +205,165 @@
     /* Butonul hamburger rămâne vizibil pentru a permite navigarea */
     .custom-navbar .navbar-toggle {
         display: block;
+    }
+}
+
+
+/* --- CENTRARE ANTET (HEADER-TOP) --- */
+
+#header-top {
+    padding: 30px 0;
+    background-color: #f5f3f3; /* Culoarea de fundal stabilită anterior */
+}
+
+/* Containerul Flex pentru aliniere */
+.display-flex-header {
+    display: flex;
+    flex-wrap: wrap;           /* Permite elementelor să treacă pe rândul următor pe mobil */
+    justify-content: center;    /* Centrează coloanele orizontal pe axa principală */
+    align-items: center;       /* Centrează elementele vertical */
+    text-align: center;        /* Asigură centrarea textului în interiorul coloanelor */
+}
+
+/* Ajustări pentru coloane pe Desktop */
+@media (min-width: 992px) {
+    .display-flex-header .col-md-3,
+    .display-flex-header .col-md-9 {
+        float: none;           /* Eliminăm float-ul Bootstrap pentru a lăsa Flexbox să lucreze */
+        display: inline-block;
+    }
+}
+
+/* Stil text antet */
+.header-text-area h1, 
+.header-text-area h3 {
+    margin: 5px 0;
+    text-align: center;        /* Centrare forțată pentru titluri */
+}
+
+/* Logo mare - Centrare imagine */
+.logo-mare {
+    max-height: 150px;         /* Limitează înălțimea pentru a nu domina pagina */
+    width: auto;
+    margin: 0 auto 15px;       /* Centrează imaginea și adaugă spațiu jos pe mobil */
+    display: block;
+}
+
+/* --- STILURI PENTRU SECTIUNEA WELCOME --- */
+
+.welcome-card {
+    background: rgba(255, 255, 255, 0.9); /* Fundal alb curat, usor transparent */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    min-height: 450px; /* Asigură că ambele carduri au aceeași înălțime */
+}
+
+.author-img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border: 5px solid #0057a0; /* Contur albastru ca logo-ul */
+    object-fit: cover;
+}
+
+.author-info h3 {
+    margin-bottom: 5px;
+    color: #0057a0;
+    font-weight: 700;
+}
+
+.author-info h5 {
+    color: #f9bc28; /* Galben pentru titlu oficial */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.teaser-text {
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.line-divider {
+    width: 60px;
+    height: 3px;
+    background: #0057a0;
+    margin: 20px auto 40px;
+}
+
+.custom-btn {
+    background-color: #0057a0 !important;
+    border: none;
+    padding: 10px 25px;
+    transition: all 0.3s;
+}
+
+.custom-btn:hover {
+    background-color: #f9bc28 !important;
+    transform: translateY(-3px);
+}
+
+/* --- STIL NOU OWL SPEAKERS (SINGLE VIEW) --- */
+
+.display-flex-center {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.speaker-card {
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+.speaker-img {
+    /* width: 200px !important; Forțăm dimensiunea în carusel */
+    height: 200px;
+    margin: 0 auto 20px;
+    border: 6px solid #f5f5f5;
+    object-fit: cover;
+}
+
+.speaker-meta h4 {
+    color: #0057a0;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.speaker-content {
+    padding-left: 50px;
+}
+
+.speaker-content h2 {
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.speaker-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Ajustare Mobil */
+@media (max-width: 767px) {
+    .speaker-content {
+        padding-left: 15px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .display-flex-center {
+        display: block; /* Dezactivăm flex-ul pe mobil pentru a curge normal */
     }
 }
