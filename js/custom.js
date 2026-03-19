@@ -65,6 +65,19 @@ $(document).ready(function() {
 			navigation : false, // Putem lăsa doar punctele de jos pentru navigare
 			pagination : true,
 		});
+
+  $(document).ready(function() {
+    $("#owl-sponsori").owlCarousel({
+      autoPlay: 6000,
+      items : 6,
+      itemsDesktop : [1199,2],
+      itemsDesktopSmall : [979,1],
+      itemsTablet: [768,1],
+      itemsTabletSmall: [985,2],
+      itemsMobile : [479,3],
+    });
+  });
+		
   });
 
 
