@@ -372,3 +372,35 @@
     float: left;
     padding-right: 10px;
 }
+
+/* --- STIL LOGOURI PARTENERI --- */
+
+/* Containerul fiecărui logo */
+#owl-partners .item {
+    padding: 20px;          /* Spațiu între logouri */
+    display: flex;          /* Folosim Flexbox pentru centrare verticală */
+    align-items: center;
+    justify-content: center;
+    height: 120px;          /* O înălțime fixă pentru container pentru aliniere perfectă */
+}
+
+/* Imaginea logoului propriu-zis */
+#owl-partners .item img {
+    display: block;
+    width: auto !important; /* NU forțăm lățimea la 100% */
+    max-width: 100%;        /* Dar nu îl lăsăm să iasă din container */
+    height: auto !important;/* Păstrăm proporțiile */
+    max-height: 80px;       /* MĂRIM ÎNĂLȚIMEA MAXIMĂ (ex: de la 50px la 80px) */
+    
+    /* Efect opțional: le facem gri și color la hover */
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+/* Efect hover */
+#owl-partners .item img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05); /* Ușoară mărire la hover */
+}
