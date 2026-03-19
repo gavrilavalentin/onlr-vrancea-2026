@@ -367,3 +367,8 @@
         display: block; /* Dezactivăm flex-ul pe mobil pentru a curge normal */
     }
 }
+
+.owl-carousel .owl-item {
+    float: left;
+    padding-right: 10px;
+}

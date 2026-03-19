@@ -77,6 +77,18 @@ $(document).ready(function() {
       itemsMobile : [479,3],
     });
   });
+  
+  $(document).ready(function() {
+    $("#owl-partners").owlCarousel({
+      autoPlay: 6000,
+      items : 4,
+      itemsDesktop : [1199,2],
+      itemsDesktopSmall : [979,1],
+      itemsTablet: [768,1],
+      itemsTabletSmall: [985,2],
+      itemsMobile : [479,3],
+    });
+  });
 		
   });
 
