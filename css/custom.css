@@ -169,3 +169,41 @@
 .custom-navbar .nav li.active a {
     color: #f9bc28 !important;
 }
+
+/* --- VIZIBILITATE NAVBAR-HEADER (LOGO MIC) --- */
+
+/* 1. Starea inițială: Ascundem navbar-header pe ecrane mari (Desktop) */
+@media (min-width: 768px) {
+    .custom-navbar .navbar-header {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease-in-out;
+        transform: translateY(-10px); /* Opțional: un ușor efect de mișcare */
+    }
+
+    /* 2. Starea Sticky: Îl afișăm doar când meniul devine fix */
+    .navbar.navbar-fixed-top .navbar-header {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+/* 3. Ajustare pentru Mobil (sub 768px) */
+/* Pe mobil trebuie să fim atenți: navbar-header conține butonul "hamburger". 
+   Dacă vrei ca butonul să fie vizibil mereu (pentru a putea deschide meniul), 
+   ascundem DOAR textul/logo-ul (navbar-brand) nu tot containerul. */
+@media (max-width: 767px) {
+    .custom-navbar .navbar-brand {
+        display: none; /* Ascundem "ONLR 2026" inițial */
+    }
+    
+    .navbar.navbar-fixed-top .navbar-brand {
+        display: block; /* Îl afișăm doar când meniul e sticky */
+    }
+    
+    /* Butonul hamburger rămâne vizibil pentru a permite navigarea */
+    .custom-navbar .navbar-toggle {
+        display: block;
+    }
+}
