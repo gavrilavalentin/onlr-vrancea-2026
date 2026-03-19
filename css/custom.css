@@ -121,3 +121,24 @@
         max-height: 120px;
     }
 }
+
+/* Stilul pentru meniu când devine fix */
+.navbar.navbar-fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #ffffff; /* Sau culoarea dorită */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    animation: fadeInDown 0.4s; /* Efect de apariție lină */
+}
+
+/* Prevenim suprapunerea conținutului când meniul devine fix */
+.navbar-fixed-top + #intro {
+    margin-top: 70px; /* Ajustează în funcție de înălțimea meniului tău */
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

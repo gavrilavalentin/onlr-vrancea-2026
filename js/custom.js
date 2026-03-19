@@ -9,10 +9,15 @@ $(window).load(function(){
 /* Mobile Navigation
     -----------------------------------------------*/
 $(window).scroll(function() {
-    if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
+    // Calculăm înălțimea antetului (zona cu sigle)
+    var headerHeight = $("#header-top").outerHeight();
+    
+    if ($(window).scrollTop() > headerHeight) {
+        // Când am scrollat mai mult decât înălțimea antetului, fixăm meniul
+        $(".navbar").addClass("navbar-fixed-top top-nav-collapse");
     } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        // Când suntem sus, meniul revine la poziția lui naturală
+        $(".navbar").removeClass("navbar-fixed-top top-nav-collapse");
     }
 });
 
